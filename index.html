@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Log In or Sign Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .facebook-blue {
+            background-color: #1877f2;
+        }
+        .facebook-blue-text {
+            color: #1877f2;
+        }
+        .create-post {
+            background-color: #f0f2f5;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center justify-center min-h-screen gap-20">
+            <!-- Left Column -->
+            <div class="text-center md:text-left max-w-md">
+                <h1 class="text-5xl font-bold facebook-blue-text mb-2">facebook</h1>
+                <p class="text-2xl">Connect with friends and the world around you on Facebook.</p>
+            </div>
+
+            <!-- Right Column - Login Form -->
+            <div class="bg-white p-5 rounded-lg shadow-lg w-full max-w-md">
+                <form id="loginForm" class="space-y-4">
+                    <input type="text" placeholder="Email or phone number" 
+                           class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
+                    <input type="password" placeholder="Password" 
+                           class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500">
+                    <button type="submit" 
+                            class="w-full facebook-blue text-white p-3 rounded-md font-bold text-xl hover:bg-blue-600">
+                        Log In
+                    </button>
+                    <div class="text-center">
+                        <a href="#" class="text-sm facebook-blue-text hover:underline">Forgot password?</a>
+                    </div>
+                    <hr class="my-4">
+                    <a href="signup.html" 
+                       class="block bg-green-500 text-white text-center p-3 rounded-md font-bold hover:bg-green-600">
+                        Create New Account
+                    </a>
+                </form>
+                <div class="mt-5 text-center text-sm">
+                    <p><a href="#" class="font-bold hover:underline">Create a Page</a> for a celebrity, brand or business.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In a real app, you would validate credentials here
+            window.location.href = 'home.html';
+        });
+    </script>
+</body>
+</html>
